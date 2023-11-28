@@ -14,7 +14,7 @@ export const EspecialidadesPage = () => {
             <div className="card h-100 d-flex flex-column">
               <img src={CATALAN} className="card-img-top" alt="Especialidad 1" />
               <div className="card-body">
-                <h3 className="card-title">Fernando Catalam</h3>
+                <h3 className="card-title">Fernando Catalan</h3>
                 <p className="card-text"> Coordinador de Escuela de Gastronomía UDI </p>
               </div>
             </div>
