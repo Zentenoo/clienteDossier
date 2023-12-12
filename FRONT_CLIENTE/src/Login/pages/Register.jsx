@@ -1,6 +1,6 @@
-import { createUsuario } from "../helpers/petUsuario";
+import { createUsuario } from "../../Login/helpers/petLogin";
 import { useEffect, useState } from "react";
-export const UsuarioCrear = () => {
+export const Register = () => {
     const [usuarioData, setUsuarioData] = useState({
         nombre: "",
         contraseña: "",
@@ -59,7 +59,6 @@ export const UsuarioCrear = () => {
                                     name="nombre"
                                     value={usuarioData.nombre}
                                     onChange={handleInputChange}
-                                    required
                                 />
                             </div>
                     
@@ -72,7 +71,6 @@ export const UsuarioCrear = () => {
                                     name="contraseña"
                                     value={usuarioData.contraseña}
                                     onChange={handleInputChange}
-                                    required
                                 />
                             </div>
                     
@@ -85,7 +83,6 @@ export const UsuarioCrear = () => {
                                     name="apellido"
                                     value={usuarioData.apellido}
                                     onChange={handleInputChange}
-                                    required
                                 />
                             </div>
                     
@@ -98,7 +95,6 @@ export const UsuarioCrear = () => {
                                     name="telefono"
                                     value={usuarioData.telefono}
                                     onChange={handleInputChange}
-                                    required
                                 />
                             </div>
                             
@@ -111,7 +107,6 @@ export const UsuarioCrear = () => {
                                     name="correo"
                                     value={usuarioData.correo}
                                     onChange={handleInputChange}
-                                    required
                                 />
                             </div>
                             
