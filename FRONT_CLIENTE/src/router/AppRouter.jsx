@@ -3,8 +3,7 @@ import { useEffect } from "react"
 import { InicioRoutes } from "../inicio/InicioRoutes"
 import { UsuariosRoute } from "../Usuario/routes/UsuarioRoute"
 import { LoginRoute } from "../Login/routes/LoginRoute"
-
-
+import { ProductoRoute } from "../Producto/routes/ProductoRoute"
 import { useContext} from "react"
 import { AuthContext } from "../Context/Authcontext"
 import { RegisterRoute } from "../Login/routes/RegisterRoute"
