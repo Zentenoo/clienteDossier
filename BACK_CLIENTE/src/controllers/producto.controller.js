@@ -2,8 +2,9 @@ const pool = require('../db');
 
 const getAllProducto = async (req, res, next) => {
     try {
-        const allProducto = await pool.query("SELECT * FROM Producto ORDER BY 1");
+        const allProducto = await pool.query("SELECT * FROM Producto WHERE estado = true ORDER BY 1");
         res.json(allProducto.rows);
+        console.log(allProducto)
     } catch (error) {
         next(error);
     }

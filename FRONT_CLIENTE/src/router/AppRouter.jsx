@@ -1,6 +1,7 @@
 import {Routes, Route, useLocation} from "react-router-dom"
 import { UsuariosRoute } from "../Usuario/routes/UsuarioRoute"
 import {InicioRoutes} from "../inicio/InicioRoutes"
+import { ProductoRoute } from "../Producto/routes/ProductoRoute"
 import { useContext} from "react"
 import { AuthContext } from "../Context/Authcontext"
 import { Login } from "../Usuario/components/Login"
@@ -36,6 +37,7 @@ export const AppRouter = () => {
                     <Route path="/*" element={<InicioPage/>}></Route>
                     <Route path="/servicios" element={<ServicioRoute/>}></Route>
                     <Route path="/usuario/*" element={<UsuariosRoute/>}></Route>
+                    <Route path="/producto/*" element={<ProductoRoute/>}></Route>
                     <Route path="/login/*" element={<Login/>}></Route>
 
                 </Routes>
