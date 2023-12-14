@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import { createUsuario } from "../../Login/helpers/petLogin";
 import { useEffect, useState } from "react";
 export const Register = () => {
+    const navigate = useNavigate()
     const [usuarioData, setUsuarioData] = useState({
         nombre: "",
         contraseña: "",
@@ -22,7 +24,7 @@ export const Register = () => {
         e.preventDefault();
         try {
             const response = await createUsuario(usuarioData);
-            window.location.href = "/usuario";
+            navigate('/')
         } catch (error) {
             console.error("Error al crear el usuario:", error);
         }
@@ -59,6 +61,7 @@ export const Register = () => {
                                     name="nombre"
                                     value={usuarioData.nombre}
                                     onChange={handleInputChange}
+                                    required
                                 />
                             </div>
                     
@@ -71,6 +74,7 @@ export const Register = () => {
                                     name="contraseña"
                                     value={usuarioData.contraseña}
                                     onChange={handleInputChange}
+                                    required
                                 />
                             </div>
                     
@@ -83,6 +87,7 @@ export const Register = () => {
                                     name="apellido"
                                     value={usuarioData.apellido}
                                     onChange={handleInputChange}
+                                    required
                                 />
                             </div>
                     
@@ -95,6 +100,7 @@ export const Register = () => {
                                     name="telefono"
                                     value={usuarioData.telefono}
                                     onChange={handleInputChange}
+                                    required
                                 />
                             </div>
                             
@@ -107,6 +113,7 @@ export const Register = () => {
                                     name="correo"
                                     value={usuarioData.correo}
                                     onChange={handleInputChange}
+                                    required
                                 />
                             </div>
                             
