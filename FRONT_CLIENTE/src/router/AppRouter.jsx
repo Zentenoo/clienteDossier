@@ -7,6 +7,7 @@ import { AuthContext } from "../Context/Authcontext"
 import { Login } from "../Usuario/components/Login"
 import { InicioPage } from "../Inicio/InicioPage"
 import { ServicioRoute } from "../Servicios/routes/ServicioRoute"
+import { ReservaRoutes } from "../Reserva/route/ReservaRoute"
 export const AppRouter = () => {
     const { isLoggedIn } = useContext(AuthContext);
     return(
@@ -23,10 +24,13 @@ export const AppRouter = () => {
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="/producto">Productos</a>
-                            </li>                          
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/reserva">Reserva</a>
+                            </li>                      
                             <li className="nav-item">
                                 <a className="nav-link" href="/login">Login</a>
-                            </li> 
+                            </li>
                         </ul>
                     </div>
 
@@ -39,6 +43,8 @@ export const AppRouter = () => {
                     <Route path="/usuario/*" element={<UsuariosRoute/>}></Route>
                     <Route path="/producto/*" element={<ProductoRoute/>}></Route>
                     <Route path="/login/*" element={<Login/>}></Route>
+                    <Route path="/reserva/*" element={<ReservaRoutes/>}></Route>
+
 
                 </Routes>
         </>
